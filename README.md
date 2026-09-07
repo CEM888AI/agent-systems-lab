@@ -1,104 +1,109 @@
-# Production Agent Reliability & Control Lab
+# Vetta — CEM888 Production Agent Beta
 
-Real agent systems. Real failures. Measured results.
+**A production-agent release candidate built on the CEM888 runtime.**
 
-Production AI agents should be judged by what they actually accomplish, how
-efficiently they execute, and whether their resulting state matches their
-claims — not just by fluent output. A lot of agent waste is a control
-problem, not merely a token-compression problem. That's the working thesis
-behind the case studies here — presented as what the evidence supports,
-not as something universally proven.
+Vetta is not a chatbot demo. She is a persistent working agent designed to operate real tools and systems, carry work across steps and sessions, verify outcomes against reality, and keep the user informed while she works.
 
-## What I build
+This repository publishes **sanitized capability evidence and measured production runs**. It intentionally does **not** publish CEM888 proprietary runtime code, prompts, orchestration logic, retrieval/scoring logic, credentials, private logs, infrastructure details, or anything sufficient to reconstruct the system.
 
-I build and operate CEM888, a real, long-running, model-agnostic
-multi-agent runtime — not a demo, a system that runs continuously across
-multiple deployed agent instances, handling real tasks with real cost and
-real failure modes. This repo is the sanitized evidence trail from
-operating it: real dates, real telemetry, real numbers, independently
-re-derived from source logs rather than taken on faith from a summary.
+## What Vetta has demonstrated
 
-**This is not** a token compressor, prompt trimmer, proxy, or context
-summarizer, and it is not an open-source release of the runtime. No source
-code, prompts, agent configuration, or orchestration/context-selection/
-retrieval implementation is published here — see
-[What remains proprietary](#what-remains-proprietary).
+### Operates real environments
+Vetta works beyond chat: she can inspect software projects, use terminal and Git workflows, investigate running systems, interact with browser and desktop environments, and work across authorized machines as part of a larger task.
 
-## Measured production results
+### Executes multi-step work
+She can take an outcome-oriented request, investigate the environment, gather evidence, use multiple tools, update her working hypothesis, and continue toward a result without requiring the user to prescribe every click.
 
-| Result | Value | Label |
-|---|---|---|
-| Aggregate prompt-cache reuse on a verified 4-call production run | **85.44%** | Measured |
-| Retries / failed / blocked tool calls on that same run | **0 / 0 / 0** | Measured |
-| Tool calls blocked outright as duplicates, zero cost (864-call sample) | **10.3%** | Measured |
-| Of the redundant calls *not* blocked, true identical re-execution vs. polling | **3.6% true duplication / 65.5% polling** | Measured, classified |
-| Bounded-termination cap firing correctly on the one turn that needed it | **1 of 79 turns**, fully accounted, not silently dropped | Measured |
-| Provider cost on the flagship verified run | **Unavailable** (model slug unresolved in the cost table at run time) | Explicitly unavailable — not shown as $0 |
+### Verifies before claiming completion
+CEM888 is designed around a simple production rule: **the agent's statement is not the proof — resulting state is.** Vetta has demonstrated production verification against live state and has stopped rather than making an unsafe or unsupported change when evidence was ambiguous.
 
-Full context, methodology, and limitations for each number are in the
-linked case studies below — none of these are meant to be read as a bare
-percentage without the caveats attached to it.
+### Corrects herself from evidence
+In live investigation, Vetta has challenged an initial assumption, gathered physical evidence, and changed her conclusion when evidence contradicted the first hypothesis rather than defending it.
 
-## Case studies
+### Avoids unnecessary repetition
+In a verified production run, Vetta completed the task with **0 provider retries and 0 duplicate reads/searches**.
 
-| Case study | What it shows | Verdict |
-|---|---|---|
-| [Production verification + cache efficiency](case-studies/production-verification-cache-efficiency.md) | A verified-correct production run, call-by-call token/cache accounting | PASS |
-| [Tool-call redundancy: what gets caught, what doesn't](case-studies/tool-call-redundancy-guard-coverage.md) | Where a duplicate-call guard works, and a specific real gap in its coverage | INCONCLUSIVE (both a real mechanism and a real gap) |
-| [Bounded termination in production](case-studies/bounded-termination-in-production.md) | The one time in 79 turns a hard iteration cap fired, fully accounted | PASS |
-| [Enabling a deterministic verification layer](case-studies/deterministic-hooks-adoption.md) | A control-layer mechanism adopted and expanded over time, never rolled back | PASS |
-| [Auditing a rollback path before you need it](case-studies/rollback-path-audit.md) | A safety-net component audited and found broken before it was ever needed | PASS |
-| [Sandbox execution stopgap](case-studies/sandbox-execution-stopgap.md) | An honest record of a fix that didn't stick — reverted a week later | INCONCLUSIVE |
+### Uses context economically during multi-call work
+In that verified run, prompt-cache reuse increased across successive calls and reached approximately **99% on the final two inference calls**.
 
-## Results
+### Remains visible while working
+Vetta reports substantive progress during multi-step work instead of disappearing into a long silent execution loop.
 
-| Result | What it shows |
-|---|---|
-| [Session-lifecycle load pattern](results/session-lifecycle-load-pattern.md) | Sessions ending via a reset path carry 3–7.7x more load than clean ones, reproduced across two independent instances — reported as correlation, not causation |
-| [Skill-lifecycle curator runs](results/skill-lifecycle-curator-runs.md) | Real duration/throughput/consolidation numbers from a self-maintaining subsystem across 5 production runs |
+### Preserves continuity
+CEM888 separates the persistent agent/runtime layer from the underlying reasoning model so useful state and working continuity do not have to disappear when a model or session changes.
 
-## Evaluation methodology
+### Remains under user control
+The runtime includes user interruption/cancellation behavior so autonomous work does not mean surrendering control of the agent.
 
-Every entry follows the same discipline: **Problem → Test → Measured
-behavior → High-level intervention (described behaviorally, never as
-implementation) → Result → Limitation.** Numbers are labeled measured,
-estimated, unavailable, or inconclusive — never asserted past what the
-source data supports. Full ground rules: [`methodology.md`](methodology.md).
+## Verified production run — September 7, 2026
 
-## Capabilities demonstrated
+A live read-only verification task asked Vetta to establish three facts about a deployed web environment, including one nonexistent artifact.
 
-The case studies above are direct, cited evidence for:
+**Independent result: 3/3 factual answers matched physical state.**
 
-- Production agent reliability and failure diagnosis
-- Context/state engineering and session-lifecycle behavior
-- Tool-use efficiency and redundant-call control
-- Cache/token economics
-- External-state verification (checking that claimed completion matches
-  reality)
-- Latency, telemetry, and observability instrumentation
-- Provider-neutral agent operation (multiple model providers observed in
-  the underlying telemetry)
+| Metric | Result |
+|---|---:|
+| Factual checks | **3/3 MATCH** |
+| Model/API calls | **4** |
+| Tool calls | **4** |
+| Failed tool calls | **0** |
+| Provider retries | **0** |
+| Duplicate reads/searches | **0** |
+| Wall time | **46.88 s** |
+| Total prompt tokens | **132,430** |
+| Cache-hit prompt tokens | **113,152** |
+| Cache-miss prompt tokens | **19,278** |
+| Aggregate prompt-cache reuse | **85.443%** |
+| Output tokens | **5,546** |
+| Provider cost | **Unavailable in retained pricing telemetry** |
 
-Capabilities I also work on but that don't yet have a published, verified
-case study in this repo — browser automation, desktop automation, MCP/API
-integrations, multi-step execution — aren't claimed as "production-proven"
-above until they have one. Not making that distinction would undercut the
-evidence that *is* here.
+Per-call cache reuse improved from roughly 68% and 67% on the first two calls to approximately **99% and 99%** on the final two calls.
 
-## What remains proprietary
+See [`case-studies/production-verification-cache-efficiency.md`](case-studies/production-verification-cache-efficiency.md) for the existing sanitized evidence record.
 
-The runtime's implementation is not published, ever: source code, system
-prompts, agent configuration, orchestration logic, context-selection and
-retrieval/scoring algorithms, memory implementation, tool-routing
-implementation, credentials, internal identifiers, and raw logs/transcripts.
-Every result above is described by observed behavior and measured outcome,
-not by the mechanism that produced it. See
-[`about-the-runtime.md`](about-the-runtime.md) for the boundary in detail.
+## Customer-facing capability track
 
-## About Chandler Morone
+Vetta's beta is being evaluated on work a customer actually cares about, not how many internal plugins or tools exist:
 
-Founder & Agentic AI Engineer, CEM888. I build and operate production
-agent runtimes — context/state orchestration, browser and desktop
-execution, MCP/API integrations, reliability and evals, observability, and
-cost/cache optimization — and spend a lot of time debugging real autonomous
-agent failures rather than demoing happy paths.
+- operate native desktop applications
+- execute browser and web workflows
+- research across multiple sites and reconcile differences
+- inspect and debug software/projects
+- use terminal and Git workflows
+- perform authorized background computer work
+- operate across authorized remote machines
+- use credentials through secure paths without exposing secrets
+- sustain long multi-tool workflows
+- recognize impossible/false-premise work instead of fabricating completion
+- resume useful work across sessions
+- verify resulting state after execution
+- report useful progress while working
+- expose measurable latency, model/tool calls, retries, token use and cache reuse
+
+These capabilities will be promoted from the beta track into the **proven** section as sanitized acceptance evidence is collected.
+
+## Why this work matters
+
+A lot of agent failure is not a model-intelligence problem. It is a **runtime control problem**: repeated work, stale context, unnecessary execution, runaway retries, false completion, weak state carry, and expensive reconstruction of information the agent already had.
+
+CEM888 focuses on the layer around the model: **state, control, execution, verification, continuity, and measurable efficiency.**
+
+> **The model provides intelligence. CEM888 provides the working system that makes that intelligence usable for real work.**
+
+## Engineering evidence, not implementation disclosure
+
+Public evidence follows:
+
+**Problem → Test → Measured behavior → High-level result → Limitation**
+
+It does not publish proprietary implementation recipes. Internal component names, plugin counts, source code, prompts, private paths, credentials, raw transcripts/logs, customer data, context-selection logic, memory/retrieval internals and orchestration machinery stay private.
+
+## About
+
+**Chandler Morone — Founder & Agentic AI Engineer, CEM888**
+
+I build production agent runtimes: context/state orchestration, browser and desktop execution, MCP/API integrations, reliability/evals, observability, cost/cache engineering, and the control systems required to make autonomous agents useful outside a demo.
+
+---
+
+**CEM888 — choose your agent, choose your intelligence, keep your continuity.**
