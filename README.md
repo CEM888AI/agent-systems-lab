@@ -1,5 +1,7 @@
 # Vetta — CEM888 Production Agent Beta
 
+![CEM888 — State decides what is true. Models decide what to do about it.](assets/cem888-state-runtime-poster.webp)
+
 **A production-agent release candidate built on the CEM888 runtime.**
 
 Vetta is not a chatbot demo. She is a persistent working agent designed to operate real tools and systems, carry work across steps and sessions, verify outcomes against reality, and keep the user informed while she works.
