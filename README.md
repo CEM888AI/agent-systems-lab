@@ -19,6 +19,8 @@ She can take an outcome-oriented request, investigate the environment, gather ev
 ### Executes live authenticated business workflows
 In a live LinkedIn business-page run, Vetta navigated the authenticated account, discovered the correct native invite workflow, recovered when a synthetic UI interaction did not change the React application state, changed interaction strategy, and completed **300+ company-page invitations** in the production account. See [`case-studies/live-authenticated-browser-growth-workflow.md`](case-studies/live-authenticated-browser-growth-workflow.md).
 
+In a separate live cross-platform brand-operations run, Vetta reconciled current LinkedIn/GitHub positioning against stale Facebook copy, updated the business profiles, connected Facebook and Instagram through Meta Business Suite, created and iterated launch artwork, recovered from multiple live UI failures, and submitted a coordinated launch post to both configured destinations. See [`case-studies/cross-platform-brand-operations.md`](case-studies/cross-platform-brand-operations.md).
+
 ### Verifies before claiming completion
 CEM888 is designed around a simple production rule: **the agent's statement is not the proof — resulting state is.** Vetta has demonstrated production verification against live state and has stopped rather than making an unsafe or unsupported change when evidence was ambiguous.
 
@@ -66,11 +68,20 @@ Per-call cache reuse improved from roughly 68% and 67% on the first two calls to
 
 See [`case-studies/production-verification-cache-efficiency.md`](case-studies/production-verification-cache-efficiency.md) for the existing sanitized evidence record.
 
+## Same-day provider spend evidence
+
+For September 7, DeepSeek's provider billing dashboard recorded **$1.85 total API spend** across the shared CEM888 testing/work account for that day: **$1.83** on `deepseek-v4-flash` and **$0.02** on `deepseek-v4-flash-vision-exp`.
+
+That provider total includes same-day work/testing by **CEM, Ember, and Vetta** and should not be read as a Vetta-only task charge. It is published as account-level provider evidence showing the actual order of magnitude of model spend during a day that included production-style autonomous work plus active engineering tests.
+
+See [`case-studies/cross-platform-brand-operations.md`](case-studies/cross-platform-brand-operations.md) for the evidence classification and limitations.
+
 ## Additional live acceptance evidence
 
 | Test | Result | Evidence |
 |---|---|---|
 | Authenticated browser business workflow | **PASS — 300+ live company-page invitations** | [`live-authenticated-browser-growth-workflow.md`](case-studies/live-authenticated-browser-growth-workflow.md) |
+| Cross-platform brand operations | **PASS with final-feed verification limitation** | [`cross-platform-brand-operations.md`](case-studies/cross-platform-brand-operations.md) |
 | Fresh-session continuity without transcript replay | **PASS** | [`fresh-session-continuity.md`](case-studies/fresh-session-continuity.md) |
 
 ## Customer-facing capability track
