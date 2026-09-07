@@ -14,6 +14,9 @@ Vetta works beyond chat: she can inspect software projects, use terminal and Git
 ### Executes multi-step work
 She can take an outcome-oriented request, investigate the environment, gather evidence, use multiple tools, update her working hypothesis, and continue toward a result without requiring the user to prescribe every click.
 
+### Executes live authenticated business workflows
+In a live LinkedIn business-page run, Vetta navigated the authenticated account, discovered the correct native invite workflow, recovered when a synthetic UI interaction did not change the React application state, changed interaction strategy, and completed **300+ company-page invitations** in the production account. See [`case-studies/live-authenticated-browser-growth-workflow.md`](case-studies/live-authenticated-browser-growth-workflow.md).
+
 ### Verifies before claiming completion
 CEM888 is designed around a simple production rule: **the agent's statement is not the proof — resulting state is.** Vetta has demonstrated production verification against live state and has stopped rather than making an unsafe or unsupported change when evidence was ambiguous.
 
@@ -60,6 +63,13 @@ A live read-only verification task asked Vetta to establish three facts about a 
 Per-call cache reuse improved from roughly 68% and 67% on the first two calls to approximately **99% and 99%** on the final two calls.
 
 See [`case-studies/production-verification-cache-efficiency.md`](case-studies/production-verification-cache-efficiency.md) for the existing sanitized evidence record.
+
+## Additional live acceptance evidence
+
+| Test | Result | Evidence |
+|---|---|---|
+| Authenticated browser business workflow | **PASS — 300+ live company-page invitations** | [`live-authenticated-browser-growth-workflow.md`](case-studies/live-authenticated-browser-growth-workflow.md) |
+| Fresh-session continuity without transcript replay | **PASS** | [`fresh-session-continuity.md`](case-studies/fresh-session-continuity.md) |
 
 ## Customer-facing capability track
 
