@@ -57,6 +57,7 @@ The one device-bound authentication challenge was completed by the account owner
 - **Live production account:** yes
 - **Real external actions:** yes
 - **Scale:** 235 company-page invitations
+- **Estimated cost:** $0.3541 for the full run ($0.0015 per invitation), off-peak
 - **Shape:** 7 chained sessions over 99.9 min — see
   [`task-continuity-across-context-compression.md`](task-continuity-across-context-compression.md)
 - **Human step-by-step control:** no

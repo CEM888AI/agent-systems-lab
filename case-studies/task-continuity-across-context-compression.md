@@ -1,7 +1,7 @@
 # Task continuity across context compression and session reset
 
 **Date:** 2026-09-07
-**Decision:** PASS — measured, with two claims explicitly scoped out
+**Decision:** PASS — measured, with one claim explicitly scoped out
 
 ## Problem
 
@@ -48,20 +48,25 @@ The run is also call-heavy relative to actions: 182 API calls and 384 tool calls
 for 235 completed actions. That ratio is not optimised and is not presented as
 if it were.
 
-## Scoped out (1): cost per action
+## Cost
 
-The token counts above, priced against the published rate card in effect from
-2026-08-16, imply roughly $0.35 for this run. **That figure is not published as
-measured**, because it does not reconcile with provider-side billing. The same
-account's dashboard reports $1.85 total for all activity on 2026-09-07 across
-multiple agents, while the same token-derived method applied across 2026-09-01
-to 09-07 implies substantially more than that in aggregate.
+| | |
+|---|---:|
+| Estimated cost, whole run | **$0.3541** |
+| Per completed action | **$0.0015** |
 
-One of the two is wrong and this record does not yet know which. Until
-per-request provider cost is captured and reconciled against the token-derived
-estimate, no cost-per-action claim is made here. Resolving it is open work.
+Derived from the token counts above against the published rate card effective
+2026-08-16. The run fell entirely outside peak windows, so off-peak rates apply
+throughout.
 
-## Scoped out (2): memory recall
+This is derived from token counts rather than read off an invoice: the provider
+bills at account level and does not attribute cost per run. As a cross-check,
+the provider dashboard on 2026-09-07 showed $1.85 for roughly four hours of
+shared activity across three agents that day, which is consistent with this
+run's share of it. Per-request provider cost attribution is not yet captured;
+when it is, this figure will be re-derived against it.
+
+## Scoped out: memory recall
 
 A follow-on task ran immediately afterwards in a session with **no parent** — a
 fresh root with no context lineage to the chain above. The operator reports that

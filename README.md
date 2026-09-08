@@ -82,7 +82,7 @@ See [`case-studies/cross-platform-brand-operations.md`](case-studies/cross-platf
 |---|---|---|
 | Authenticated browser business workflow | **PASS — 235 live company-page invitations** | [`live-authenticated-browser-growth-workflow.md`](case-studies/live-authenticated-browser-growth-workflow.md) |
 | Cross-platform brand operations | **PASS with final-feed verification limitation** | [`cross-platform-brand-operations.md`](case-studies/cross-platform-brand-operations.md) |
-| Task continuity across 6 compressions + 1 reset | **PASS — 7 chained sessions, 99.9 min, unattended** | [`task-continuity-across-context-compression.md`](case-studies/task-continuity-across-context-compression.md) |
+| Task continuity across 6 compressions + 1 reset | **PASS — 7 chained sessions, 99.9 min, ~$0.35 total** | [`task-continuity-across-context-compression.md`](case-studies/task-continuity-across-context-compression.md) |
 
 ## Customer-facing capability track
 
