@@ -2,8 +2,8 @@
 
 The case studies and results in this repo come from CEM888, a personal,
 long-running multi-agent runtime — model-agnostic orchestration, persistent
-state and memory, scheduled/background agents, and a self-maintaining
-skill system, operated continuously in production rather than as a demo.
+state and memory, scheduled/background agents, and self-maintaining
+capabilities, operated continuously in production rather than as a demo.
 Evidence is drawn from multiple independently-running agent instances on
 this runtime (referred to as "Ember" and "Vetta" in the case studies) —
 same underlying system, separate deployments, separate telemetry.

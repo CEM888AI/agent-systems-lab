@@ -33,7 +33,7 @@ a deliberately conservative approach, not a difference of exact content:
 - **89 of 864 tool calls (10.3%)** were blocked outright at zero cost —
   direct evidence the runtime has a working duplicate-suppression
   mechanism.
-- Of 400 same-turn, same-argument repeat calls identified in this window:
+- Of **362** same-turn, same-argument repeat calls classified in this window:
   - **46** were blocked/prevented (0 cost)
   - **39** were true redundant re-execution — identical output returned
     again — costing **13.0 seconds** of tool time (**3.6%** of all
@@ -68,8 +68,19 @@ to show the two outcomes at once rather than average them into a clean
 PASS or FAIL: the control layer measurably prevents some redundant work,
 and measurably misses some, in a way now precise enough to act on.
 
+## Open discrepancy
+
+Two blocked-call figures appear above and they are not the same number: **89**
+blocked calls across all 864 tool calls, versus **46** blocked inside the 362
+classified same-turn, same-argument repeats. The remaining 43 fall outside the
+(turn, arguments) grouping used here. This write-up does not resolve *why* from
+the data available — it reports both figures as measured rather than picking
+whichever reads better, and flags reconciling them as open work.
+
 ## Limitation
 
-Single 2.6-day window on one instance. Output-size matching is a proxy for
+Single 2.6-day window on one instance. The classified set (362) covers repeats
+matched on exact (turn, arguments); repeats differing in argument serialization
+fall outside it and are not counted. Output-size matching is a proxy for
 identical content, not a byte-for-byte diff. The "polling vs. duplication"
 split is a reasonable but not definitive read of the data.

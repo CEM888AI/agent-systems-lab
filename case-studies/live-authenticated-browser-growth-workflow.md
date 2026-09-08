@@ -28,13 +28,13 @@ The live agent:
 - filtered toward people relevant to AI, engineering, and potential business/runtime partnerships;
 - detected when a synthetic DOM click did not actually change the live React application state;
 - re-inspected the rendered controls and changed interaction strategy rather than assuming success;
-- continued through the live workflow and sent **300+ company-page invitations**, owner-confirmed in the production account.
+- continued through the live workflow and sent **235 company-page invitations**, owner-confirmed in the production account.
 
 ## Result
 
 **PASS.**
 
-The agent completed a real authenticated browser workflow at business scale, including UI discovery, error recovery, targeted selection, and hundreds of successful live actions.
+The agent completed a real authenticated browser workflow at business scale, including UI discovery, error recovery, targeted selection, and 235 successful live actions.
 
 ## Why this matters
 
@@ -56,7 +56,9 @@ The one device-bound authentication challenge was completed by the account owner
 
 - **Live production account:** yes
 - **Real external actions:** yes
-- **Scale:** 300+ company-page invitations
+- **Scale:** 235 company-page invitations
+- **Shape:** 7 chained sessions over 99.9 min — see
+  [`task-continuity-across-context-compression.md`](task-continuity-across-context-compression.md)
 - **Human step-by-step control:** no
 - **Owner intervention:** authentication boundary only, then normal steering
 - **Result confirmation:** owner-confirmed in the live account

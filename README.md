@@ -17,7 +17,7 @@ Vetta works beyond chat: she can inspect software projects, use terminal and Git
 She can take an outcome-oriented request, investigate the environment, gather evidence, use multiple tools, update her working hypothesis, and continue toward a result without requiring the user to prescribe every click.
 
 ### Executes live authenticated business workflows
-In a live LinkedIn business-page run, Vetta navigated the authenticated account, discovered the correct native invite workflow, recovered when a synthetic UI interaction did not change the React application state, changed interaction strategy, and completed **300+ company-page invitations** in the production account. See [`case-studies/live-authenticated-browser-growth-workflow.md`](case-studies/live-authenticated-browser-growth-workflow.md).
+In a live LinkedIn business-page run, Vetta navigated the authenticated account, discovered the correct native invite workflow, recovered when a synthetic UI interaction did not change the React application state, changed interaction strategy, and completed **235 company-page invitations** in the production account. See [`case-studies/live-authenticated-browser-growth-workflow.md`](case-studies/live-authenticated-browser-growth-workflow.md).
 
 In a separate live cross-platform brand-operations run, Vetta reconciled current LinkedIn/GitHub positioning against stale Facebook copy, updated the business profiles, connected Facebook and Instagram through Meta Business Suite, created and iterated launch artwork, recovered from multiple live UI failures, and submitted a coordinated launch post to both configured destinations. See [`case-studies/cross-platform-brand-operations.md`](case-studies/cross-platform-brand-operations.md).
 
@@ -56,11 +56,11 @@ A live read-only verification task asked Vetta to establish three facts about a 
 | Failed tool calls | **0** |
 | Provider retries | **0** |
 | Duplicate reads/searches | **0** |
-| Wall time | **46.88 s** |
+| Wall time | **46.07 s** |
 | Total prompt tokens | **132,430** |
 | Cache-hit prompt tokens | **113,152** |
 | Cache-miss prompt tokens | **19,278** |
-| Aggregate prompt-cache reuse | **85.443%** |
+| Aggregate prompt-cache reuse | **85.44%** |
 | Output tokens | **5,546** |
 | Provider cost | **Unavailable in retained pricing telemetry** |
 
@@ -80,9 +80,9 @@ See [`case-studies/cross-platform-brand-operations.md`](case-studies/cross-platf
 
 | Test | Result | Evidence |
 |---|---|---|
-| Authenticated browser business workflow | **PASS — 300+ live company-page invitations** | [`live-authenticated-browser-growth-workflow.md`](case-studies/live-authenticated-browser-growth-workflow.md) |
+| Authenticated browser business workflow | **PASS — 235 live company-page invitations** | [`live-authenticated-browser-growth-workflow.md`](case-studies/live-authenticated-browser-growth-workflow.md) |
 | Cross-platform brand operations | **PASS with final-feed verification limitation** | [`cross-platform-brand-operations.md`](case-studies/cross-platform-brand-operations.md) |
-| Fresh-session continuity without transcript replay | **PASS** | [`fresh-session-continuity.md`](case-studies/fresh-session-continuity.md) |
+| Task continuity across 6 compressions + 1 reset | **PASS — 7 chained sessions, 99.9 min, unattended** | [`task-continuity-across-context-compression.md`](case-studies/task-continuity-across-context-compression.md) |
 
 ## Customer-facing capability track
 

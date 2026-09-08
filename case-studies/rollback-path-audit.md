@@ -6,7 +6,7 @@ before it was ever exercised
 
 ## Problem
 
-Several weeks earlier, a core context-injection component had been replaced
+Several weeks earlier, a core runtime component had been replaced
 by an improved version. Following standard practice, the previous
 component was left in the codebase, disabled via configuration, as a
 documented rollback path in case the replacement needed to be reverted.
@@ -39,12 +39,10 @@ usable (yes/no).
 
 ## Result
 
-The audit found that, in the relevant operating mode, the legacy
-component's early-exit logic would skip a required state-insertion step and
-a fallback mechanism that the current system now depends on. In other
-words: if the rollback had ever actually been executed, it would have
-**silently** degraded state continuity rather than safely reverting to the
-old behavior — the opposite of what a rollback path is for.
+The audit found that, in the relevant operating mode, the legacy component
+would silently skip work the current system now depends on. If the rollback
+had ever actually been executed, it would have degraded state continuity
+without surfacing an error — the opposite of what a rollback path is for.
 
 ## Failure analysis / learning
 
