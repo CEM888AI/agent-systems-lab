@@ -8,6 +8,8 @@ Vetta is not a chatbot demo. She is a persistent working agent designed to opera
 
 This repository publishes **sanitized capability evidence and measured production runs**. It intentionally does **not** publish CEM888 proprietary runtime code, prompts, orchestration logic, retrieval/scoring logic, credentials, private logs, infrastructure details, or anything sufficient to reconstruct the system.
 
+> Part of **[CEM888.AI](https://github.com/CEM888AI)** · flagship overview: **[cem888](https://github.com/CEM888AI/cem888)**
+
 ## What Vetta has demonstrated
 
 ### Operates real environments
