@@ -1,5 +1,10 @@
 # Vetta — CEM888 Production Agent Beta
 
+> ### ⬅️ This is supporting evidence, not the project.
+> **CEM888** is a local-first, model-agnostic agent runtime — state, identity, authority, and verification that live on your machine and persist across Claude, GPT, DeepSeek, and local models. Vetta is one agent built on it; this repo publishes her measured production runs.
+>
+> **→ [cem888.ai](https://cem888.ai)** · [All CEM888 repositories](https://github.com/CEM888AI) · [💗 Sponsor](https://ko-fi.com/cem888ai)
+
 ![CEM888 — State decides what is true. Models decide what to do about it.](assets/cem888-state-runtime-poster.webp)
 
 **A production-agent release candidate built on the CEM888 runtime.**
@@ -7,8 +12,6 @@
 Vetta is not a chatbot demo. She is a persistent working agent designed to operate real tools and systems, carry work across steps and sessions, verify outcomes against reality, and keep the user informed while she works.
 
 This repository publishes **sanitized capability evidence and measured production runs**. It intentionally does **not** publish CEM888 proprietary runtime code, prompts, orchestration logic, retrieval/scoring logic, credentials, private logs, infrastructure details, or anything sufficient to reconstruct the system.
-
-> Part of **[CEM888.AI](https://github.com/CEM888AI)** · flagship overview: **[cem888](https://github.com/CEM888AI/cem888)**
 
 ## What Vetta has demonstrated
 
@@ -132,3 +135,5 @@ I build production agent runtimes: context/state orchestration, browser and desk
 ---
 
 **CEM888 — choose your agent, choose your intelligence, keep your continuity.**
+
+**[cem888.ai](https://cem888.ai)** · [💗 Sponsor](https://ko-fi.com/cem888ai) · creator@cem888.ai
