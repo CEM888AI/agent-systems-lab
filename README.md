@@ -3,7 +3,7 @@
 > ### ⬅️ This is supporting evidence, not the project.
 > **CEM888** is a local-first, model-agnostic agent runtime — state, identity, authority, and verification that live on your machine and persist across Claude, GPT, DeepSeek, and local models. Vetta is one agent built on it; this repo publishes her measured production runs.
 >
-> **→ The project: [CEM888AI/cem888](https://github.com/CEM888AI/cem888)** — ⭐ star it · [cem888.ai](https://cem888.ai) · [💗 Sponsor](https://ko-fi.com/cem888ai)
+> **→ The product: [cem888.ai](https://cem888.ai)** — create a free account and download for your machine · [💗 Sponsor](https://ko-fi.com/cem888ai)
 
 ![CEM888 — State decides what is true. Models decide what to do about it.](assets/cem888-state-runtime-poster.webp)
 
@@ -136,4 +136,4 @@ I build production agent runtimes: context/state orchestration, browser and desk
 
 **CEM888 — choose your agent, choose your intelligence, keep your continuity.**
 
-**[⭐ Star CEM888](https://github.com/CEM888AI/cem888)** · [cem888.ai](https://cem888.ai) · [💗 Sponsor](https://ko-fi.com/cem888ai) · creator@cem888.ai
+**[cem888.ai](https://cem888.ai)** · **[Current engineering status](https://github.com/CEM888AI/runtime-case-studies/blob/main/current-engineering-status.md)** · [💗 Sponsor](https://ko-fi.com/cem888ai) · creator@cem888.ai
